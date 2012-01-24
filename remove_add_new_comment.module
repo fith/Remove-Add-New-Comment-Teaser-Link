@@ -1,0 +1,20 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * Removes the "Add new comment" link from teasers.
+ *
+ */
+
+//invoke the link_alter hook
+function remove_add_new_comment_link_alter(&$links, $node) {
+
+  //check to see that we are not on a full page and the comment link has been set
+  if ( !( arg(0) == 'node' && is_numeric( arg(1) ) ) && ( $links['comment_add'] ) ) {
+    
+    //remove the "Add new comment" button
+    unset($links['comment_add']);
+  }
+}
+?>

@@ -1,0 +1,5 @@
+; $Id$
+name = Add Comment link removal
+description = Removes the "Add New Comment" link on node teasers
+version = "6.x-1.0"
+core = "6.x"
